@@ -12,6 +12,7 @@ const loggr = new CatLoggr({
 
 const fs = require("fs")
 // Command Handler
+const commands = new Map()
 fs.readdir("./commands/", (err, f) => {
     if(err) return loggr.error(err)
 
@@ -19,6 +20,14 @@ fs.readdir("./commands/", (err, f) => {
 
     if(files.length === 0) {
         loggr.commands("There are no commands to load!")
+    }
+
+    for(let i = 0; i < files.length; i++) {
+        let props = require(`./commands/${files[i]}`)
+        props.file = files[i];
+        commands.set(props.help.name, props)
+
+        loggr.commands(`Loaded command ${files[i].slice(0, -3)} successfully.`)
     }
 })
 
