@@ -12,7 +12,8 @@ const loggr = new CatLoggr({
 
 const fs = require("fs")
 // Command Handler
-const commands = new Map()
+coffea.commands = new Map()
+coffea.aliases = new Map()
 fs.readdir("./commands/", (err, f) => {
     if(err) return loggr.error(err)
 
@@ -25,8 +26,10 @@ fs.readdir("./commands/", (err, f) => {
     for(let i = 0; i < files.length; i++) {
         let props = require(`./commands/${files[i]}`)
         props.file = files[i];
-        commands.set(props.help.name, props)
-
+        coffea.commands.set(props.help.name, props)
+        props.config.aliases.forEach(a => {
+            coffea.aliases.set(a, props.help.name)
+        })
         loggr.commands(`Loaded command ${files[i].slice(0, -3)} successfully.`)
     }
 })
