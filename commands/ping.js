@@ -11,6 +11,6 @@ module.exports.config = {
 
 module.exports.help = {
     "name": "ping",
-    "desc": "See how long it takes me to deliver coffee to discord. (Response Time)"
+    "desc": "See how long it takes me to deliver coffee to discord. (Response Time)",
     "usage": "ping"
 }
