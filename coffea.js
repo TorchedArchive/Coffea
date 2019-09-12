@@ -20,6 +20,7 @@ fs.readdir("./events/", (err, f) => {
     for(let i = 0; i < files.length; i++) {
         const event = require(`./events/${files[i]}`)
         coffea.on(files[i].slice(0, -3), event.bind(null, coffea))
+        loggr.log(`[EVENTS] > Loaded ${files[i].slice(0, -3)} event successfully.`)
     }
 })
 
