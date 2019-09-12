@@ -1,0 +1,30 @@
+{
+  "name": "coffea",
+  "version": "0.0.1",
+  "description": "A Discord bot 100% about coffee. Featuring images, coffee economy (soon) and more!",
+  "main": "coffea.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuraiStacks/Coffea.git"
+  },
+  "keywords": [
+    "coffee",
+    "bot",
+    "discord-bot",
+    "economy",
+    "images"
+  ],
+  "author": "SamuraiStacks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamuraiStacks/Coffea/issues"
+  },
+  "homepage": "https://github.com/SamuraiStacks/Coffea#readme",
+  "dependencies": {
+    "cat-loggr": "^1.0.17",
+    "eris": "^0.10.1"
+  }
+}
