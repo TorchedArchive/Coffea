@@ -11,8 +11,8 @@ module.exports.run = (coffea, msg, args) => {
         fields: [
             {
                 "name": "Links",
-                "value": `**Join the [Support Server](https://discord.gg/xk2SjaZ) if 
-                         you need help with anything.**`
+                "value": `**➕ [Invite](https://discordapp.com/oauth2/authorize?client_id=621773057702494238&scope=bot&permissions=379969) me to your server to use commands in your server.**
+                         👥 **Join the [Support Server](https://discord.gg/xk2SjaZ) if you need help with anything.**`
             
             }
         ]
