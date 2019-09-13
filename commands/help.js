@@ -2,7 +2,7 @@ module.exports.run = (coffea, msg, args) => {
     const cmds = coffea.commands.filter(f => f.config.owner !== true)
 
     msg.channel.createMessage({embed: {
-        color: 0x0,
+        color: 0xE9D115,
         title: "Coffea Help Page",
         thumbnail: {
             url: coffea.user.avatarURL.replace("jpg", "png")
