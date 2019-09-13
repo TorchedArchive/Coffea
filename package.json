@@ -25,6 +25,7 @@
   "homepage": "https://github.com/SamuraiStacks/Coffea#readme",
   "dependencies": {
     "cat-loggr": "^1.0.17",
-    "eris": "^0.10.1"
+    "eris": "^0.10.1",
+    "node-fetch": "^2.6.0"
   }
 }

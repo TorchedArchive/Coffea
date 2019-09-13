@@ -53,3 +53,13 @@ fs.readdir("./events/", (err, f) => {
 })
 
 coffea.connect()
+
+Map.prototype.filter = function(fn, thisArg) {
+	if (thisArg) fn = fn.bind(thisArg);
+    const results = new Map();
+    for (const [key, val] of this) {
+    	if (fn(val, key, this)) results.set(key, val);        
+    }
+    return results;
+      
+}
