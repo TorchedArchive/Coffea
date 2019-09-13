@@ -5,14 +5,14 @@ module.exports.run = (coffea, msg, args) => {
         color: 0x0,
         title: "Coffea Help Page",
         thumbnail: {
-            url: coffea.user.avatarURL
+            url: coffea.user.avatarURL.replace("jpg", "png")
         },
         description: cmds.map(c => `\`${c.help.usage}\` - ${c.help.desc}`).join("\n"),
         fields: [
             {
                 "name": "Links",
                 "value": `**Join the [Support Server](https://discord.gg/xk2SjaZ) if 
-                         \nyou need help with anything.**`
+                         you need help with anything.**`
             
             }
         ]
