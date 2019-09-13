@@ -63,3 +63,11 @@ Map.prototype.filter = function(fn, thisArg) {
     return results;
       
 }
+
+Map.prototype.map = function(fn, thisArg) {
+    if (thisArg) fn = fn.bind(thisArg);
+    const arr = new Array(this.size);
+    let i = 0;
+    for (const [key, val] of this) arr[i++] = fn(val, key, this);
+    return arr;
+  }

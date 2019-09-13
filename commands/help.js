@@ -4,15 +4,18 @@ module.exports.run = (coffea, msg, args) => {
     msg.channel.createMessage({embed: {
         color: 0x0,
         title: "Coffea Help Page",
-        thumbnail: bot.user.avatarURL,
+        thumbnail: {
+            url: coffea.user.avatarURL
+        },
         description: cmds.map(c => `\`${c.help.usage}\` - ${c.help.desc}`).join("\n"),
-        fields: {
-            [
+        fields: [
+            {
                 "name": "Links",
                 "value": `**Join the [Support Server](https://discord.gg/xk2SjaZ) if 
                          \nyou need help with anything.**`
-            ]
-        }
+            
+            }
+        ]
     }})
 }
 
