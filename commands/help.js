@@ -1,11 +1,19 @@
 module.exports.run = (coffea, msg, args) => {
-    const cmds = coffea.commands.filter(f => f.help.name === "ping")
+    const cmds = coffea.commands.filter(f => f.config.owner !== true)
 
     msg.channel.createMessage({embed: {
         color: 0x0,
-        description: "e"
+        title: "Coffea Help Page",
+        thumbnail: bot.user.avatarURL,
+        description: cmds.map(c => `\`${c.help.usage}\` - ${c.help.desc}`).join("\n"),
+        fields: {
+            [
+                "name": "Links",
+                "value": `**Join the [Support Server](https://discord.gg/xk2SjaZ) if 
+                         \nyou need help with anything.**`
+            ]
+        }
     }})
-    console.log(cmds.map())
 }
 
 module.exports.config = {
@@ -15,5 +23,5 @@ module.exports.config = {
 module.exports.help = {
     name: "help",
     desc: "Look at all the commands for Coffea.",
-    usage: "help [command]"
+    usage: "help"
 }
