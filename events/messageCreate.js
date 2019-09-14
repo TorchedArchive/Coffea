@@ -18,7 +18,7 @@ module.exports = (coffea, msg) => {
         if(coffea.commands.has(command)) {
             cmd = coffea.commands.get(command)
         } else if(coffea.aliases.get(command)) {
-            cmd = coffea.commands.get(aliases.get(command))
+            cmd = coffea.commands.get(coffea.aliases.get(command))
         } else {
             return;
         }
