@@ -15,16 +15,13 @@ exports.run = function(coffea, msg, args) {
                     embed: {
                         color: 0x00CA06,
                         description: `\`Eval Result\`:
-                        \`\`\`js\n${clean(evaled)}
-                        \`\`\``
+                        \`\`\`js\n${clean(evaled)}\n\`\`\``
                     }
                 })
             }
         } catch (err) {
             msg.channel.createMessage(`\`Error\`:
-                \`\`\`js
-                ${clean(err)}
-                \`\`\``);
+                \`\`\`js\n${clean(err)}\n\`\`\``);
         }
     }
 }
