@@ -15,8 +15,7 @@ exports.run = function(coffea, msg, args) {
                     embed: {
                         color: 0x00CA06,
                         description: `\`Eval Result\`:
-                        \`\`\`js
-                        ${clean(evaled)}
+                        \`\`\`js\n${clean(evaled)}
                         \`\`\``
                     }
                 })
